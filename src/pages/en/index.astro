@@ -1,0 +1,449 @@
+---
+import translator from "../../i18n/translator";
+import Base from "../../layouts/Base.astro";
+
+const { translate } = translator(Astro);
+---
+
+<Base baseRoute="/">
+  <h1>A Discord bot for harm reduction and chemistry.</h1>
+  <img
+    class="hero"
+    src="/img/psychotropic.svg"
+    alt={translate("site.altLogo")}
+  />
+  <p>
+    Psychotropic provides various information about chemicals, psychoactives,
+    their properties and uses.
+  </p>
+  <a
+    class="cta"
+    href="https://discord.com/oauth2/authorize?client_id=665177975053877259&scope=bot+applications.commands&permissions=277025442880"
+    >Add me to your guild!</a
+  >
+
+  <h2 id="license">License</h2>
+  <p>
+    Psychotropic is open source software, distributed under the <a
+      href="https://www.gnu.org/licenses/gpl-3.0.html"
+      rel="external nofollow">GNU GPL v3</a
+    > license. Source code is avalaible <a
+      href="https://github.com/x-yzt/psychotropic"
+      rel="external nofollow">here</a
+    >.
+  </p>
+
+  <h2 id="terms-of-use">Terms of Use</h2>
+
+  <h3>1. Acceptance of Terms</h3>
+  <p>
+    By adding Psychotropic to a server, interacting with it, or using any of its
+    commands or features, you agree to these Terms of Service ("Terms") and to
+    our <a href="#privacy-policy">Privacy Policy</a>.
+  </p>
+  <p>
+    If you add Psychotropic to a server, you confirm that you have the authority
+    to do so and that you accept these Terms on behalf of that server.
+  </p>
+
+  <h3>2. Purpose and Nature of the Service</h3>
+  <p>
+    Psychotropic provides <b>educational information</b> about chemistry, pharmacology,
+    psychoactive substances, their effects, risks, and traditional or therapeutic
+    uses, with a focus on <b>harm reduction</b>: reducing the health and social
+    risks associated with substance use, regardless of its legal status.
+  </p>
+  <p><b>Psychotropic is not:</b></p>
+  <ul>
+    <li>a medical, psychiatric, pharmaceutical, or legal service;</li>
+    <li>
+      a substitute for a doctor, pharmacist, addiction specialist, or emergency
+      services;
+    </li>
+    <li>
+      a source of diagnosis, treatment, prescriptions, or personalized dosing
+      advice;
+    </li>
+    <li>a marketplace, vendor directory, or sourcing tool.</li>
+  </ul>
+  <p>
+    Nothing Psychotropic provides is a recommendation or encouragement to use
+    any substance.
+  </p>
+
+  <h3>3. Eligibility</h3>
+  <p>
+    You must be at least <b>18 years old</b> (or the age of majority in your jurisdiction,
+    if higher) to use Psychotropic. You must also meet the minimum age required by
+    Discord's Terms of Service.
+  </p>
+  <p>
+    Server administrators must ensure Psychotropic is used only in appropriately
+    age-restricted channels where required by Discord's policies and applicable
+    law.
+  </p>
+
+  <h3>4. Medical and Safety Disclaimer</h3>
+  <p>
+    <b>Information may be incomplete, outdated, or inaccurate.</b> Responses may include
+    automated content and may contain errors. Effects, risks, and interactions vary
+    greatly between individuals based on health, genetics, medication, dose, setting,
+    and purity.
+  </p>
+  <ul>
+    <li>
+      <b>No substance is risk-free.</b> Information about safer use does not mean
+      a substance or behavior is safe.
+    </li>
+    <li>
+      <b>Always consult a qualified healthcare professional</b> before making decisions
+      about your health, medications, or substance use.
+    </li>
+    <li>
+      <b>In an emergency, contact local emergency services immediately</b> or a poison
+      control center. Do not rely on Psychotropic or wait for a reply in a medical
+      emergency.
+    </li>
+  </ul>
+  <p>
+    Psychotropic may display crisis and support resources. These are provided
+    for convenience and are not guaranteed to be available, complete, or
+    current.
+  </p>
+
+  <h3>5. Prohibited Uses</h3>
+  <p>You agree <b>not</b> to use Psychotropic to:</p>
+  <ol>
+    <li>
+      <b
+        >Request or obtain synthesis, extraction, production, or manufacturing
+        instructions</b
+      > for controlled or illegal substances, explosives, or weapons or their precursors;
+    </li>
+    <li>
+      <b>Buy, sell, trade, source, or advertise</b> controlled substances, or locate
+      vendors, markets, or dealers;
+    </li>
+    <li>
+      <b>Encourage or pressure others</b> to use substances, or promote drug use to
+      minors or vulnerable people;
+    </li>
+    <li><b>Evade law enforcement</b> or commit any unlawful act;</li>
+    <li>
+      <b>Scrape or bulk-extract</b> Psychotropic's content for commercial redistribution
+      or to train other models without permission;
+    </li>
+    <li>
+      <b>Violate</b> the Discord Terms of Service, Community Guidelines, or Developer
+      Policy.
+    </li>
+  </ol>
+
+  <h3>6. Legal Compliance and User Responsibility</h3>
+  <p>
+    Laws on psychoactive substances differ widely and change often.
+    <b>You alone are responsible</b> for knowing and complying with the laws of your
+    jurisdiction. Information about a substance's effects, uses, or safer-use practices
+    does not mean it is legal where you live. We make no representation that Psychotropic's
+    content is lawful or appropriate in every location.
+  </p>
+  <p>
+    You use all information <b>at your own risk</b> and are solely responsible for
+    your choices and their consequences.
+  </p>
+
+  <h3>7. Server Administrator Responsibilities</h3>
+  <p>If you administer a server that uses Psychotropic, you agree to:</p>
+  <ul>
+    <li>
+      configure channels and permissions appropriately, including age-gating
+      where required;
+    </li>
+    <li>
+      moderate use of Psychotropic in your server and enforce these Terms;
+    </li>
+    <li>
+      not present Psychotropic as a medical service or as endorsed by us beyond
+      what is stated here.
+    </li>
+  </ul>
+
+  <h3>8. Data and Privacy</h3>
+  <p>
+    We collect and process limited data to operate Psychotropic (such as Discord
+    user and server IDs, commands and inputs, and technical logs). Because
+    substance-use information can be sensitive, we:
+  </p>
+  <ul>
+    <li>collect only what is necessary;</li>
+    <li>do not sell personal data;</li>
+    <li>do not perform any generative model training on personal data;</li>
+    <li>do not store the content of conversations.</li>
+  </ul>
+  <p>
+    Details, including your rights to access, correct, delete, or port your data
+    (including under the <b>GDPR</b> if you are in the EEA/UK), are in our
+    <a href="#privacy-policy">Privacy Policy</a>.
+  </p>
+  <p>
+    We recommand that you <b>do not share sensitive personal information</b> (such
+    as your full name, address, or health records) with Psychotropic or in public
+    channels.
+  </p>
+
+  <h3>9. Intellectual Property and License</h3>
+  <p>
+    <b>Source code.</b> Psychotropic's source code is free software released under
+    the GNU General Public License version 3 ("GPL-3.0"). Your rights to use, study,
+    modify, and redistribute the code are set out in that license. Nothing in these
+    Terms restricts the rights the GPL-3.0 grants you.
+  </p>
+  <p>
+    <b>Hosted service.</b> These Terms govern your use of the instance of Psychotropic
+    that we operate (the "Service"), not the source code. If you run your own copy
+    of Psychotropic, you are the operator of that copy, these Terms do not apply to
+    it, and you are solely responsible for its content, data handling, and legal compliance.
+    You may not present your copy as the official Service or imply that we endorse
+    or are responsible for it.
+  </p>
+  <p>
+    <b>Content and data.</b> Unless stated otherwise, documentation and informational
+    content published with Psychotropic is in the public domain. Some content may
+    be adapted from third-party sources and remains subject to the rights and licenses
+    of its owners.
+  </p>
+  <p>
+    <b>Name and branding.</b> Psychotropic's name, logo, and visual identity are not
+    licensed under the GPL-3.0. You may not use them in a way that suggests affiliation
+    with or endorsement by us, except as permitted by law or by a separate written
+    permission.
+  </p>
+  <p>
+    <b>Contributions.</b> Unless we agree otherwise in writing, anything you contribute
+    to Psychotropic's source code is licensed under the same terms as the code, the
+    GPL-3.0.
+  </p>
+  <p>
+    <b>Warranty.</b> For the source code, the warranty disclaimer and limitation of
+    liability in the GPL-3.0 apply. Sections 13 and 14 of these Terms apply to the
+    Service.
+  </p>
+
+  <h3>10. Third-Party Services and Links</h3>
+  <p>
+    Psychotropic runs on Discord and may link to or rely on third-party
+    resources (e.g., harm reduction organizations, databases, or drug-checking
+    services). We do not control and are not responsible for third-party
+    content, services, or availability.
+  </p>
+
+  <h3>11. Availability and Changes to the Service</h3>
+  <p>
+    Psychotropic is provided on a best-effort basis. We may modify, suspend,
+    limit, or discontinue any part of it at any time, with or without notice,
+    including to comply with law or platform requirements.
+  </p>
+
+  <h3>12. Suspension and Termination</h3>
+  <p>
+    You may stop using Psychotropic at any time by removing it from your server.
+  </p>
+
+  <h3>13. Disclaimer of Warranties</h3>
+  <p>
+    TO THE FULLEST EXTENT PERMITTED BY LAW, PSYCHOTROPIC AND ALL CONTENT ARE
+    PROVIDED <b>"AS IS" AND "AS AVAILABLE"</b> WITHOUT WARRANTIES OF ANY KIND, EXPRESS
+    OR IMPLIED, INCLUDING WARRANTIES OF ACCURACY, COMPLETENESS, RELIABILITY, MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT
+    PSYCHOTROPIC WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE.
+  </p>
+
+  <h3>14. Limitation of Liability</h3>
+  <p>
+    TO THE FULLEST EXTENT PERMITTED BY LAW, WE AND OUR CONTRIBUTORS, VOLUNTEERS,
+    AND AFFILIATES WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+    CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF HEALTH, LIFE, DATA,
+    PROFITS, OR REPUTATION, ARISING FROM YOUR USE OF OR RELIANCE ON PSYCHOTROPIC
+    OR ITS CONTENT, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+  </p>
+  <p>
+    Some jurisdictions do not allow certain limitations, including limitations
+    of liability for death, personal injury, gross negligence, or intentional
+    misconduct. In those cases, our liability is limited to the maximum extent
+    permitted by law. Nothing in these Terms limits any rights you have as a
+    consumer under mandatory law.
+  </p>
+
+  <h3>15. Changes to These Terms</h3>
+  <p>
+    We may update these Terms from time to time. Continued use after the
+    effective date means you accept the revised Terms.
+  </p>
+
+  <h2 id="privacy-policy">Privacy policy</h2>
+
+  <h3>1. Object of This Policy</h3>
+  <p>
+    We are the <b>data controller</b> for the personal data described here under the
+    EU General Data Protection Regulation (GDPR) and the UK GDPR where applicable.
+  </p>
+  <p>
+    Contact <a href="https://github.com/x-yzt" rel="external nofollow">xyzt_</a> for
+    all privacy matters.
+  </p>
+  <p>
+    This policy applies to the instance of Psychotropic that we operate. If
+    someone runs their own copy of Psychotropic's open-source code, they are the
+    controller for that copy.
+  </p>
+
+  <h3>2. Data We Process</h3>
+  <p>
+    Psychotropic mainly works through Discord's interactions (slash commands,
+    buttons, and similar components). It also uses Discord's <b
+      >Message Content intent</b
+    > so that it can read messages in channels where a game is running and detect
+    players' guesses.
+  </p>
+  <table>
+    <thead>
+      <tr><th>Data</th><th>Uses</th><th>Stored?</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Message content</b></td>
+        <td>Detect whether a message contains a correct guess</td>
+        <td>
+          No. Processed in memory only, then discarded. We do not save, log,
+          copy, or share it.
+        </td>
+      </tr>
+      <tr>
+        <td><b>User ID</b></td>
+        <td>Attribute scores to the right player</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td><b>Display name</b></td>
+        <td>Show you on leaderboards</td>
+        <td>No (fetched live)</td>
+      </tr>
+      <tr>
+        <td><b>Game scores and statistics</b></td>
+        <td>Run leaderboards</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td><b>Server (guild) and channel IDs</b></td>
+        <td>Technical purposes</td>
+        <td>No</td>
+      </tr>
+      <tr>
+        <td><b>Technical logs</b></td>
+        <td>Technical purposes</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    <b>Note on message content:</b> because Psychotropic can read messages in channels
+    where a game is active, it technically sees messages from everyone writing there,
+    including people who are not playing. It only checks them against the current
+    game and keeps nothing. Discord, as an independent controller, holds your messages.
+  </p>
+  <p>No data is used for generative models training.</p>
+
+  <h3>3. Who We Share Data With</h3>
+  <p>
+    Your display name and your scores appear on leaderboards that are visible to
+    other users of Psychotropic, which may include people outside your server.
+    If you do not want to appear, you can contact us, and we will remove or
+    anonymize your entry. Upon deletion of your Discord account, your scores
+    will be anonymized.
+  </p>
+
+  <p>
+    We do <b>not</b> sell your personal data or share it for advertising. Data is
+    shared only with:
+  </p>
+  <ul>
+    <li>
+      <b>Discord Inc.</b>, which runs the platform and is an independent
+      controller of the data it holds about you. See <a
+        href="https://discord.com/privacy"
+        rel="external nofollow">Discord's Privacy Policy</a
+      >;
+    </li>
+    <li>
+      <b>Our hosting provider</b>, acting as a processor that stores
+      Psychotropic's database.
+    </li>
+  </ul>
+
+  <h3>4. International Transfers</h3>
+  <p>
+    Discord operates globally, including in the United States, and handles
+    transfers under its own safeguards. If we or our processors transfer
+    personal data outside the EEA/UK, we rely on an adequacy decision, the EU-US
+    Data Privacy Framework where the recipient is certified, or Standard
+    Contractual Clauses, as applicable.
+  </p>
+
+  <h3>5. Your Rights</h3>
+  <p>Under the GDPR you have the right to:</p>
+  <ul>
+    <li>
+      <b>Access</b> the personal data we hold about you and receive a copy;
+    </li>
+    <li><b>Rectify</b> inaccurate data;</li>
+    <li><b>Erase</b> your data ("right to be forgotten");</li>
+    <li><b>Restrict</b> processing in certain cases;</li>
+    <li>
+      <b>Data portability</b>, to receive your data in a structured,
+      machine-readable format;
+    </li>
+    <li>
+      <b>Object</b> to processing based on legitimate interests, including appearing
+      on leaderboards.
+    </li>
+  </ul>
+  <p>
+    To use these rights, contact us. We may need to verify that you control the
+    Discord account concerned. We respond within <b>one month</b>.
+  </p>
+  <p>
+    You also have the right to <b>lodge a complaint</b> with a data protection authority,
+    in particular in the EU/EEA country where you live, work, or where you believe
+    an infringement occurred (for example, the CNIL in France, or the ICO in the UK).
+    A list is available at <a
+      href="https://edpb.europa.eu/about-edpb/about-edpb/members_en"
+    >
+      edpb.europa.eu
+    </a>. We would appreciate the chance to resolve your concern first.
+  </p>
+
+  <h3>6. Children</h3>
+  <p>
+    You must meet Discord's minimum age requirement and be at least 18 under our
+    Terms of Service. If we learn that we hold data about someone who does not
+    meet these requirements, we will delete it. If you believe this has
+    happened, contact us.
+  </p>
+
+  <h3>7. Security</h3>
+  <p>
+    We use appropriate technical and organizational measures to protect data,
+    such as access controls, restricted credentials, encrypted connections, and
+    limited data collection. No system is completely secure. If a breach is
+    likely to put your rights at risk, we will notify the relevant authority
+    within 72 hours and inform you where required by law.
+  </p>
+
+  <h3>8. Changes to This Policy</h3>
+  <p>
+    We may update this Policy from time to time. Continued use after the
+    effective date means you accept the revised Policy.
+  </p>
+
+  <slot name="after-content" />
+</Base>

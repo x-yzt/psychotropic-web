@@ -1,0 +1,180 @@
+---
+import translator from "../i18n/translator";
+import LanguageSelector from "../i18n/LanguageSelector.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+  baseRoute?: string;
+}
+
+const { currentLocale, translate, translateUrl, translateUrlTo } =
+  translator(Astro);
+const {
+  title = translate("site.title"),
+  description = translate("site.description"),
+  baseRoute = undefined,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={currentLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/img/psychotropic.svg" />
+    <title>{title}</title>
+  </head>
+
+  <body>
+    <header>
+      <a id="home" href={translateUrl("/")}>
+        <img src="/img/psychotropic.svg" alt={translate("site.altLogo")} />
+        <span>Psychotropic</span>
+      </a>
+
+      <LanguageSelector baseRoute={baseRoute} />
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      {translate("site.footer.madeBy")}
+      <a href="https://github.com/x-yzt" rel="external nofollow">xyzt_</a>
+    </footer>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --bg: #F7F8FA;
+    --bg-fade: #F1F2F5;
+    --text: #1B2430;
+    --muted: #55606E;
+    --accent: #1F3A5F;
+    --rule: #C8CED6;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12171E;
+      --bg-fade: #181D25;
+      --text: #E7EBF0;
+      --muted: #9AA5B2;
+      --accent: #8FB4E3;
+      --rule: #2A323D;
+    }
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font:
+      1.0625rem/1.65 system-ui,
+      -apple-system,
+      "Segoe UI",
+      sans-serif;
+  }
+  header,
+  main,
+  footer {
+    max-width: 42rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.25rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  header #home {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+  }
+  header #home img {
+    height: 3rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  header a {
+    color: var(--muted);
+    text-decoration: none;
+  }
+  header a[aria-current="page"],
+  header #home {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  header a[aria-current="page"] {
+    cursor: default;
+  }
+  a {
+    color: var(--accent);
+  }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  main {
+    padding-block: 3rem;
+  }
+  .hero {
+    display: block;
+    margin: clamp(3rem, 10vw, 6rem) auto;
+  }
+  .cta {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    margin: .5rem 0;
+    background: linear-gradient(60deg, #c501ff, #636fff, #03dcff);
+    color: #FFF;
+    border-radius: .75rem;;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.5rem;
+    transition: ease-in-out 100ms;
+  }
+  .cta:hover, .cta:focus {
+    border-radius: .25rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1rem;
+  }
+  h2 {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin: 3rem 0 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1;
+    margin: 1.5rem 0 1rem;
+  }
+  table {
+    background: var(--bg-fade);
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid var(--rule);
+    padding: .5rem;
+  }
+  footer {
+    padding-block: 2rem;
+    color: var(--muted);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--rule);
+  }
+</style>

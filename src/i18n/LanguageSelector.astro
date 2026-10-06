@@ -1,0 +1,36 @@
+---
+import { locales, type Locale } from "../i18n/locales";
+import translator from "../i18n/translator";
+
+interface Props {
+  baseRoute?: string;
+}
+
+const { currentLocale, translate, translateUrlTo } = translator(Astro);
+const { baseRoute = undefined } = Astro.props;
+---
+
+<nav aria-label={translate("site.languages")}>
+  {
+    Object.entries(locales).map(([code, name]) => (
+      <a
+        href={translateUrlTo(code as Locale, baseRoute || Astro.routePattern)}
+        hreflang={code}
+        lang={code}
+        aria-current={code === currentLocale ? "page" : undefined}
+      >
+        {name}
+      </a>
+    ))
+  }
+</nav>
+
+<script>
+  document.querySelectorAll("nav a[hreflang]").forEach((element) => {
+    element.addEventListener("click", () => {
+      const code = element.getAttribute("hreflang");
+
+      if (code) localStorage.setItem("lang", code);
+    });
+  });
+</script>
