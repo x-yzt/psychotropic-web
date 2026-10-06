@@ -13,9 +13,6 @@ export default defineConfig({
     i18n: {
         locales: Object.keys(translations),
         defaultLocale,
-        fallback: {
-            fr: "en",
-        },
         routing: {
             prefixDefaultLocale: true,
         },
